@@ -1,0 +1,1 @@
+Este repositório contém um programa em C que implementa um jogo de comparação de cartas no estilo Super Trunfo. Os usuários podem cadastrar duas cartas, calcular atributos como densidade populacional, PIB per capita e um valor especial chamado "Super Poder". Em seguida, as cartas são comparadas atributo por atributo, e o programa determina a vencedora em cada categoria.
