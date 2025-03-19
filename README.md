@@ -1,5 +1,7 @@
 Super Trunfo - Batalha de Cartas com Super Poder
+
 Este projeto implementa um jogo de Super Trunfo em C, onde os jogadores comparam cartas de cidades, com base em diferentes atributos, para determinar qual carta é superior. As cartas incluem informações como população, área, PIB, pontos turísticos, entre outras.
+
 
 Funcionalidades Implementadas
 Níveis do Jogo:
