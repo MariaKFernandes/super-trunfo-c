@@ -1,73 +1,82 @@
-# Super Trunfo - Cidades do Rio de Janeiro
+Super Trunfo - Batalha de Cartas com Super Poder
+Este projeto implementa um jogo de Super Trunfo em C, onde os jogadores comparam cartas de cidades, com base em diferentes atributos, para determinar qual carta é superior. As cartas incluem informações como população, área, PIB, pontos turísticos, entre outras.
 
-Este projeto é uma implementação do jogo **Super Trunfo**, onde as cartas são representadas por **cidades do Rio de Janeiro**. O jogo compara diferentes propriedades das cidades e decide um vencedor com base em critérios como **densidade populacional**, **PIB**, **número de pontos turísticos** e o **super poder** (soma das propriedades).
+Funcionalidades Implementadas
+Níveis do Jogo:
+Cadastro das Cartas: O usuário pode inserir os dados de duas cartas, incluindo:
 
-## Funcionalidades
+Nome da cidade
+População
+Área
+PIB
+Pontos Turísticos
+Cálculos Adicionais:
 
-O projeto está dividido em três níveis:
+Densidade Populacional: Calculada como a razão entre a população e a área da cidade.
+PIB per Capita: Calculado como o PIB dividido pela população da cidade.
+Super Poder: O super poder é calculado somando todos os atributos numéricos e aplicando um valor inverso na densidade populacional (quanto menor a densidade, maior o poder). A fórmula do Super Poder é:
+java
+Copiar
+Editar
+Super Poder = População + Área + PIB + Pontos Turísticos + (1 / Densidade Populacional) + PIB per Capita
+Comparação das Cartas:
 
-### Nível Novato
-- Cadastro das cartas, onde o usuário insere informações sobre cada cidade do Rio de Janeiro.
-- As informações inseridas são armazenadas em um sistema e exibidas para o usuário.
+As cartas são comparadas atributo por atributo, incluindo:
+População (maior valor vence)
+Área (maior valor vence)
+PIB (maior valor vence)
+Pontos Turísticos (maior valor vence)
+Densidade Populacional (menor valor vence)
+PIB per Capita (maior valor vence)
+Super Poder (maior valor vence)
+Exibição dos Resultados:
 
-### Nível Aventureiro
-- Adição de propriedades calculadas:
-  - **Densidade Populacional**: População dividida pela área da cidade.
-  - **PIB per Capita**: PIB total dividido pela população.
-  
-### Nível Mestre
-- Comparação entre duas cidades com base nas propriedades cadastradas e calculadas.
-- Determinação do vencedor em cada categoria:
-  - **Densidade Populacional**: Vence a carta com a menor densidade populacional.
-  - **PIB**: Vence a carta com o maior PIB.
-  - **Pontos Turísticos**: Vence a carta com mais pontos turísticos.
-  - **Super Poder**: A soma de todas as propriedades, vence a carta com maior super poder.
+Após comparar todos os atributos, o programa exibe o vencedor de cada comparação.
+No final, o programa mostra quem venceu no total, considerando o número de vitórias em cada atributo comparado.
+Exemplo de Execução
+bash
+Copiar
+Editar
+Insira os dados para a Carta 1:
+Nome: Cidade A
+População: 1000000
+Área (em km²): 500.5
+PIB: 100000000
+Pontos Turísticos: 15
 
-## Como Executar
+Insira os dados para a Carta 2:
+Nome: Cidade B
+População: 1200000
+Área (em km²): 600.3
+PIB: 120000000
+Pontos Turísticos: 20
 
-### Requisitos
+Comparação de Cartas:
+População: Carta 2 venceu
+Área: Carta 1 venceu
+PIB: Carta 1 venceu
+Pontos Turísticos: Carta 1 venceu
+Densidade Populacional: Carta 1 venceu
+PIB per Capita: Carta 2 venceu
+Super Poder: Carta 1 venceu
 
-- **C**: O código foi escrito em C. Você precisará de um compilador para rodá-lo. Recomendamos o [GCC](https://gcc.gnu.org/).
+Carta 1 venceu no total com 4 vitórias!
+Como Jogar
+Compile o código em C utilizando um compilador C, como o gcc.
+Execute o programa no terminal.
+Insira os dados das duas cartas que deseja comparar.
+O programa exibirá os vencedores de cada atributo e o vencedor geral da rodada.
+Requisitos
+Compilador C (gcc ou similar)
+Sistema operacional: Funciona em sistemas Linux e Windows.
+Como Contribuir
+Faça um fork deste repositório.
+Crie uma branch com suas alterações (git checkout -b minha-feature).
+Faça o commit das suas alterações (git commit -m 'Adicionando nova funcionalidade').
+Envie suas alterações para o repositório remoto (git push origin minha-feature).
+Crie um pull request.
 
-### Compilação e Execução
-
-1. **Baixe o repositório**:
-   - Clique no botão **"Code"** e depois em **"Download ZIP"**, ou clone o repositório com o comando:
-     ```bash
-     git clone https://github.com/SEU_USUARIO/SuperTrunfo-RJ.git
-     ```
-
-2. **Compile o código**:
-   - Se você está usando o GCC, basta rodar o comando:
-     ```bash
-     gcc super_trunfo_rj.c -o super_trunfo
-     ```
-
-3. **Execute o programa**:
-   - No terminal, execute:
-     ```bash
-     ./super_trunfo
-     ```
-
-4. **Interaja com o programa**:
-   - O programa irá pedir que você insira dados sobre as cidades do Rio de Janeiro (nome, população, PIB, pontos turísticos).
-   - Após inserir as cidades, você poderá comparar duas delas e ver qual é a vencedora de acordo com as propriedades.
-
-## Estrutura do Projeto
-
-- **super_trunfo_rj.c**: Código principal com a lógica de cadastro, cálculo e comparação das cidades.
-- **README.md**: Documentação deste projeto.
-
-## Próximos Passos
-
-- Implementação de mais funcionalidades, como um sistema de **rankings** para as cidades.
-- Melhorias na interface, como uma interface gráfica (GUI) ou um menu mais interativo.
-- Expansão para outras cidades além do Rio de Janeiro, com a inclusão de mais propriedades e dados.
-
-## Contribuições
-
-Sinta-se à vontade para fazer contribuições! Se você tem sugestões de melhorias ou encontrou um bug, crie uma **issue** ou envie um **pull request**.
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Dicas:
+Atualizações: Como você fez algumas alterações no código, é bom destacar isso no README, como fiz acima.
+Exemplo de Execução: Inclua sempre um exemplo de como o jogo se comporta após a atualização, para que quem for usar o código saiba o que esperar.
+Instruções de Compilação: Certifique-se de que o repositório contenha instruções de compilação claras.
