@@ -2,7 +2,6 @@ Super Trunfo - Batalha de Cartas com Super Poder
 
 Este projeto implementa um jogo de Super Trunfo em C, onde os jogadores comparam cartas de cidades, com base em diferentes atributos, para determinar qual carta é superior. As cartas incluem informações como população, área, PIB, pontos turísticos, entre outras.
 
-
 Funcionalidades Implementadas
 Níveis do Jogo:
 Cadastro das Cartas: O usuário pode inserir os dados de duas cartas, incluindo:
@@ -77,8 +76,3 @@ Crie uma branch com suas alterações (git checkout -b minha-feature).
 Faça o commit das suas alterações (git commit -m 'Adicionando nova funcionalidade').
 Envie suas alterações para o repositório remoto (git push origin minha-feature).
 Crie um pull request.
-
-Dicas:
-Atualizações: Como você fez algumas alterações no código, é bom destacar isso no README, como fiz acima.
-Exemplo de Execução: Inclua sempre um exemplo de como o jogo se comporta após a atualização, para que quem for usar o código saiba o que esperar.
-Instruções de Compilação: Certifique-se de que o repositório contenha instruções de compilação claras.
